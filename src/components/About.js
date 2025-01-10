@@ -1,6 +1,7 @@
 // src/components/About.js
 import React, { useEffect, useState } from "react";
 import { useTheme } from "../ThemeContext";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const About = () => {
   const { darkMode } = useTheme();
@@ -11,17 +12,17 @@ const About = () => {
     frontend: [
       { name: "HTML", percent: 100, color: "#cc6699" },
       { name: "CSS", percent: 100, color: "#31A8FF" },
-      { name: "JavaScript", percent: 90, color: "#f7df1e" },
+      { name: "JavaScript", percent: 80, color: "#f7df1e" },
       { name: "React", percent: 85, color: "#61dafb" },
       { name: "Redux", percent: 80, color: "#764abc" },
-      { name: "TypeScript", percent: 75, color: "#007acc" },
-      { name: "Tailwind CSS", percent: 85, color: "#38b2ac" },
-      { name: "Bootstrap", percent: 70, color: "#563d7c" },
+      { name: "TypeScript", percent: 65, color: "#007acc" },
+      { name: "Tailwind CSS", percent: 100, color: "#38b2ac" },
+      { name: "Bootstrap", percent: 80, color: "#563d7c" },
     ],
     backend: [
       { name: "Node.js", percent: 60, color: "#68a063" },
       { name: "Express.js", percent: 70, color: "#cc6699" },
-      { name: "MongoDB", percent: 60, color: "#47A248" },
+      { name: "MongoDB", percent: 80, color: "#47A248" },
       { name: "APIs", percent: 75, color: "#f0db4f" },
       { name: "Python", percent: 65, color: "#3776AB" },
       { name: "RESTful APIs", percent: 85, color: "#F1502F" },
@@ -52,17 +53,16 @@ const About = () => {
                 updated[skill.name] + 1,
                 skill.percent
               );
-              allDone = false; // If any skill is not done, we continue the interval
+              allDone = false;
             }
           }
         );
 
-        if (allDone) clearInterval(timer); // Stop the interval when all skills are done
+        if (allDone) clearInterval(timer);
         return updated;
       });
-    }, 20); // Adjust the speed of the animation
+    }, 20);
 
-    // Initialize progress
     const initialProgress = {};
     [...skills.frontend, ...skills.backend, ...skills.otherSkills].forEach(
       (skill) => {
@@ -71,12 +71,12 @@ const About = () => {
     );
     setProgress(initialProgress);
 
-    return () => clearInterval(timer); // Cleanup interval on unmount
+    return () => clearInterval(timer);
   }, []);
 
-  const radius = 30; // Radius of the circle
-  const strokeWidth = 8; // Width of the stroke
-  const circumference = 2 * Math.PI * radius; // Circumference of the circle
+  const radius = 30;
+  const strokeWidth = 8;
+  const circumference = 2 * Math.PI * radius;
 
   const renderSkills = (skillSet) => {
     return (
@@ -111,7 +111,7 @@ const About = () => {
                   x="50%"
                   y="50%"
                   textAnchor="middle"
-                  fill={darkMode ? "white" : "black"} // Adjust text color for dark mode
+                  fill={darkMode ? "white" : "black"}
                   dy=".3em"
                   fontSize="14"
                 >
@@ -128,13 +128,14 @@ const About = () => {
 
   return (
     <div>
-      <div className="h-2" id="about"></div>
+      <div className="h-1"></div>
       <div
+        id="about"
         className={`pb-20 pt-16 px-8 mx-10 center transition-all duration-300 shadow-lg my-24 rounded-lg ${
           darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"
         }`}
       >
-        <h2 className="text-5xl font-bold text-left mb-8 text-orange-500">
+        <h2 className="text-5xl font-bold text-left mt-4 mb-8 text-orange-500">
           About Me
         </h2>
         <div className="flex flex-col items-center md:flex-row md:justify-center">
@@ -153,9 +154,7 @@ const About = () => {
             </p>
           </div>
 
-          {/* Skills Section */}
           <div className="md:w-2/3 flex flex-col items-center">
-            {/* Tab Buttons */}
             <div className="flex justify-center mb-4">
               <button
                 onClick={() => setActiveTab("frontend")}
@@ -189,9 +188,43 @@ const About = () => {
               </button>
             </div>
 
-            {/* Render Active Skills */}
             {renderSkills(skills[activeTab])}
           </div>
+        </div>
+        <a
+          href="#projects"
+          className={`mt-6 inline-block px-4 py-3 font-semibold rounded-lg shadow transition duration-300 text-lg ${
+            darkMode
+              ? "border-2 border-orange-400 text-black-900 hover:bg-orange-100"
+              : "border-2 border-orange-400 text-white-900 hover:bg-orange-100"
+          }`}
+        >
+          <span className="animate__animated animate__bounce">
+            Get my Resume
+          </span>
+        </a>
+        <div className="mt-4 -mb-8 flex justify-center space-x-4">
+          <a
+            href="https://www.linkedin.com/in/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="text-3xl text-orange-400 hover:text-blue-400 transition" />
+          </a>
+          <a
+            href="https://github.com/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="text-3xl text-orange-400 hover:text-gray-600 transition" />
+          </a>
+          <a
+            href="https://twitter.com/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter className="text-orange-400 text-3xl hover:text-blue-300 transition" />
+          </a>
         </div>
       </div>
     </div>

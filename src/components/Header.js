@@ -3,7 +3,7 @@ import React from "react";
 import { useTheme } from "../ThemeContext";
 
 const Header = () => {
-  const { darkMode, toggleDarkMode } = useTheme(); // Access theme context
+  const { darkMode, toggleDarkMode } = useTheme();
 
   return (
     <header
@@ -11,9 +11,9 @@ const Header = () => {
         darkMode ? "text-white" : "text-gray-800"
       }`}
     >
-      <h1 className="text-4xl font-extrabold tracking-wider font-sans shadow-md">
+      {/* <h1 className="text-4xl font-extrabold tracking-wider font-sans shadow-md">
         Shogofa Muradi
-      </h1>
+      </h1> */}
       <nav>
         <ul className="flex space-x-8">
           <li>
