@@ -11,9 +11,9 @@ const Contact = () => {
   });
   const [error, setError] = useState("");
   const [validEmail, setValidEmail] = useState(true);
+  const [successMessage, setSuccessMessage] = useState("");
 
   useEffect(() => {
-    // Load saved data from local storage
     const savedData = localStorage.getItem("formData");
     if (savedData) {
       setFormData(JSON.parse(savedData));
@@ -32,20 +32,13 @@ const Contact = () => {
     );
   };
 
-  const validateUsername = (username) => {
-    const regex = /^[a-zA-Z\s]+$/;
-    return regex.test(username);
-  };
+  const validateUsername = (username) => /^[a-zA-Z\s]+$/.test(username);
+  const validateEmail = (email) => email === email.toLowerCase();
 
-  const validateEmail = (email) => {
-    return email === email.toLowerCase(); // Check if email is in lowercase
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email } = formData;
 
-    // Validate username and email
     if (!validateUsername(name)) {
       setError("Use only English alphabets for username.");
       return;
@@ -57,16 +50,32 @@ const Contact = () => {
       return;
     }
 
-    // Reset error and clear local storage
     setError("");
     setValidEmail(true);
     localStorage.removeItem("formData");
 
-    // Handle form submission logic (e.g., API call)
-    console.log("Form submitted:", formData);
+    try {
+      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
 
-    // Optionally reset the form
-    setFormData({ name: "", email: "", message: "" });
+      if (response.ok) {
+        setSuccessMessage("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setError("Failed to send message.");
+      }
+    } catch (err) {
+      setError("Error sending message.");
+    }
   };
 
   return (
@@ -129,9 +138,10 @@ const Contact = () => {
           />
         </div>
         {error && <p className="text-red-500">{error}</p>}
+        {successMessage && <p className="text-green-500">{successMessage}</p>}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+          className="w-80 bg-orange-400 text-white py-4 center mx-auto rounded hover:bg-orange-600 transition"
         >
           Send Message
         </button>

@@ -34,10 +34,10 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#skills"
+              href="#contact"
               className="text-lg hover:underline hover:text-blue-400 transition duration-200"
             >
-              Skills
+              Contact
             </a>
           </li>
         </ul>
