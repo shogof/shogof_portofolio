@@ -55,7 +55,7 @@ const Contact = () => {
     localStorage.removeItem("formData");
 
     try {
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const response = await fetch("https://formspree.io/f/xbllqgye", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,74 +78,117 @@ const Contact = () => {
     }
   };
 
+  const handleReset = () => {
+    setFormData({ name: "", email: "", message: "" });
+    setError("");
+    setSuccessMessage("");
+  };
+
   return (
     <div
-      className={`py-20 px-6 transition-all duration-300 shadow-lg rounded-lg max-w-3xl mx-auto my-10 ${
+      className={`min-h-screen flex items-center justify-center transition-all duration-300 ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"
       }`}
     >
-      <h2 className="text-5xl font-bold text-left mb-8">Contact Me</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
-        <div>
-          <label className="block mb-1" htmlFor="name">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className={`w-full p-2 border rounded ${
-              error && !validateUsername(formData.name)
-                ? "border-red-500"
-                : "border-gray-300"
-            }`}
-          />
-        </div>
-        <div>
-          <label className="block mb-1" htmlFor="email">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className={`w-full p-2 border rounded ${
-              !validEmail ? "border-red-500" : "border-gray-300"
-            }`}
-          />
-          {!validEmail && (
-            <p className="text-red-500">Email must be in lowercase.</p>
-          )}
-        </div>
-        <div>
-          <label className="block mb-1" htmlFor="message">
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows="4"
-            className="w-full p-2 border rounded"
-          />
-        </div>
-        {error && <p className="text-red-500">{error}</p>}
-        {successMessage && <p className="text-green-500">{successMessage}</p>}
-        <button
-          type="submit"
-          className="w-80 bg-orange-400 text-white py-4 center mx-auto rounded hover:bg-orange-600 transition"
+      <div
+        className={`py-10 px-6 mt-10 duration-300 shadow-lg rounded-lg w-full max-w-2xl transform hover:scale-105 ${
+          darkMode ? "bg-gray-900 shadow-gray-700" : "bg-white shadow-gray-300"
+        }`}
+      >
+        <h2 className="text-4xl font-bold text-center mb-4 transition duration-500 ease-in-out transform hover:translate-x-1 text-orange-500">
+          Contact Me
+        </h2>
+        <p
+          className={`mb-6 text-lg text-center ${
+            darkMode ? "text-gray-100" : "text-gray-600"
+          }`}
         >
-          Send Message
-        </button>
-      </form>
+          If you have an app you'd like to develop, a feature you need
+          implemented, or a project that requires coding, I'd be excited to
+          assist!
+        </p>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center space-y-4"
+        >
+          <div className="w-full md:w-96">
+            <label className="block mb-1 text-sm font-semibold" htmlFor="name">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              placeholder="Your Name"
+              className={`w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400 transition duration-300 ease-in-out hover:shadow-lg ${
+                error && !validateUsername(formData.name)
+                  ? "border-red-500"
+                  : "border-gray-300"
+              }`}
+            />
+          </div>
+          <div className="w-full md:w-96">
+            <label className="block mb-1 text-sm font-semibold" htmlFor="email">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              placeholder="Your Email"
+              className={`w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400 transition duration-300 ease-in-out hover:shadow-lg ${
+                !validEmail ? "border-red-500" : "border-gray-300"
+              }`}
+            />
+            {!validEmail && (
+              <p className="text-red-500 text-sm">
+                Email must be in lowercase.
+              </p>
+            )}
+          </div>
+          <div className="w-full md:w-96">
+            <label
+              className="block mb-1 text-sm font-semibold"
+              htmlFor="message"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              rows="6"
+              placeholder="Your Message"
+              className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400 transition duration-300 ease-in-out hover:shadow-lg"
+            />
+          </div>
+          {error && <p className="text-red-500">{error}</p>}
+          {successMessage && <p className="text-green-500">{successMessage}</p>}
+          <div className="flex space-x-4">
+            <button
+              type="submit"
+              className="w-48 bg-orange-400 text-white py-2 rounded hover:bg-orange-500 transition duration-300 ease-in-out"
+            >
+              Send Message
+            </button>
+            <button
+              type="button"
+              onClick={handleReset}
+              className="bg-gray-300 w-48 text-gray-800 py-2 rounded hover:bg-gray-400 transition duration-300 ease-in-out"
+            >
+              Reset
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
