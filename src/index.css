@@ -7,3 +7,20 @@
     font-family: 'Inter', sans-serif;
   }
 } */
+
+/* Add this to your CSS file */
+/* Add this to your CSS file */
+@keyframes modal-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-modal {
+  animation: modal-animation 0.3s ease-out forwards;
+}

@@ -7,19 +7,19 @@ const Header = () => {
 
   return (
     <header
-      className={`flex justify-between items-center p-6 fixed w-full z-10 transition-all duration-300 ${
-        darkMode ? "text-white" : "text-gray-800"
+      className={`fixed w-full top-0 left-0 flex justify-between items-center p-4 z-10 transition-all duration-300 ${
+        darkMode
+          ? "text-white bg-black bg-opacity-30 shadow-lg"
+          : "text-gray-800 bg-white bg-opacity-70 shadow-lg"
       }`}
     >
-      {/* <h1 className="text-4xl font-extrabold tracking-wider font-sans shadow-md">
-        Shogofa Muradi
-      </h1> */}
+      {/* Navigation Menu */}
       <nav>
         <ul className="flex space-x-8">
           <li>
             <a
               href="#projects"
-              className="text-lg hover:underline hover:text-blue-400 transition duration-200"
+              className="text-lg font-semibold hover:text-[#4fd1c5] transition duration-200"
             >
               Projects
             </a>
@@ -27,7 +27,7 @@ const Header = () => {
           <li>
             <a
               href="#about"
-              className="text-lg hover:underline hover:text-blue-400 transition duration-200"
+              className="text-lg font-semibold hover:text-[#4fd1c5] transition duration-200"
             >
               About
             </a>
@@ -35,19 +35,21 @@ const Header = () => {
           <li>
             <a
               href="#contact"
-              className="text-lg hover:underline hover:text-blue-400 transition duration-200"
+              className="text-lg font-semibold hover:text-[#4fd1c5] transition duration-200"
             >
               Contact
             </a>
           </li>
         </ul>
       </nav>
+
+      {/* Dark Mode Toggle Button */}
       <button
         onClick={toggleDarkMode}
-        className={`px-4 py-2 border rounded-lg text-lg transition duration-300 ${
+        className={`px-4 py-2 border rounded-lg text-lg font-semibold transition duration-300 ${
           darkMode
-            ? "border-white text-white hover:bg-gray-800"
-            : "border-gray-800 text-gray-800 hover:bg-gray-200"
+            ? "border-white text-white hover:bg-[#38b2ac] hover:text-gray-900"
+            : "border-gray-800 text-gray-800 hover:bg-[#38b2ac] hover:text-white"
         }`}
       >
         {darkMode ? "Light Mode" : "Dark Mode"}

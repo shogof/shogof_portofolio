@@ -95,7 +95,7 @@ const Contact = () => {
           darkMode ? "bg-gray-900 shadow-gray-700" : "bg-white shadow-gray-300"
         }`}
       >
-        <h2 className="text-4xl font-bold text-center mb-4 transition duration-500 ease-in-out transform hover:translate-x-1 text-orange-500">
+        <h2 className="text-4xl font-bold text-center mb-4 transition duration-500 ease-in-out transform hover:translate-x-1 text-teal-600">
           Contact Me
         </h2>
         <p
@@ -123,7 +123,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               placeholder="Your Name"
-              className={`w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400 transition duration-300 ease-in-out hover:shadow-lg ${
+              className={`w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-teal-600 transition duration-300 ease-in-out hover:shadow-lg ${
                 error && !validateUsername(formData.name)
                   ? "border-red-500"
                   : "border-gray-300"
@@ -142,7 +142,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               placeholder="Your Email"
-              className={`w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400 transition duration-300 ease-in-out hover:shadow-lg ${
+              className={`w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-teal-600 transition duration-300 ease-in-out hover:shadow-lg ${
                 !validEmail ? "border-red-500" : "border-gray-300"
               }`}
             />
@@ -167,7 +167,7 @@ const Contact = () => {
               required
               rows="6"
               placeholder="Your Message"
-              className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-orange-400 transition duration-300 ease-in-out hover:shadow-lg"
+              className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-teal-600 transition duration-300 ease-in-out hover:shadow-lg"
             />
           </div>
           {error && <p className="text-red-500">{error}</p>}
@@ -175,7 +175,7 @@ const Contact = () => {
           <div className="flex space-x-4">
             <button
               type="submit"
-              className="w-48 bg-orange-400 text-white py-2 rounded hover:bg-orange-500 transition duration-300 ease-in-out"
+              className="w-48 bg-teal-600 text-white py-2 rounded hover:bg-teal-700 transition duration-300 ease-in-out"
             >
               Send Message
             </button>
