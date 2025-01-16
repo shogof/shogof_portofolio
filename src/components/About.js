@@ -80,7 +80,7 @@ const About = () => {
 
   const renderSkills = (skillSet) => {
     return (
-      <div className="grid grid-cols-4 gap-4 max-w-xs mx-auto">
+      <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 max-w-full mx-auto">
         {skillSet.map((skill) => {
           const strokeDashoffset =
             circumference - (circumference * (progress[skill.name] || 0)) / 100;
@@ -131,18 +131,16 @@ const About = () => {
       <div className="h-1"></div>
       <div
         id="about"
-        className={`pb-20 pt-16 px-8 mx-10 center transition-all duration-300 shadow-lg my-24 rounded-lg ${
+        className={`pb-20 pt-16 px-4 md:px-8 mx-0 center transition-all duration-300 shadow-lg my-24 rounded-lg ${
           darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"
         }`}
       >
         <h2 className="text-5xl font-bold text-left mt-4 mb-8 text-sky-600">
-          {" "}
-          {/* Changed color here to sky-600 */}
           About Me
         </h2>
-        <div className="flex flex-col items-center md:flex-row md:justify-center">
-          <div className="md:max-w-xl mb-8 md:mb-0 ml-8">
-            <p className="mt-0 text-lg max-w-3xl mx-auto text-justify">
+        <div className="flex flex-col items-center md:flex-row md:justify-between">
+          <div className="md:max-w-xl mb-8 md:mb-0">
+            <p className="mt-0 text-lg m-5 max-w-full mx-auto text-justify">
               As a web developer, I am passionate about creating user-friendly
               websites and web applications. With a strong foundation in
               front-end technologies like HTML, CSS, JavaScript, and frameworks
@@ -193,26 +191,30 @@ const About = () => {
             {renderSkills(skills[activeTab])}
           </div>
         </div>
-        <a
-          href="#projects"
-          className={`mt-6 inline-block px-4 py-3 font-semibold rounded-lg shadow transition duration-300 text-lg ${
-            darkMode
-              ? "border-2 border-sky-600 text-black-900 hover:bg-sky-100"
-              : "border-2 border-sky-600 text-white-900 hover:bg-sky-100"
-          }`}
-        >
-          <span className="animate__animated animate__bounce">
-            Get my Resume
-          </span>
-        </a>
+
+        {/* Centered Resume Button on Mobile Only */}
+        <div className="flex justify-center mt-6 md:justify-start">
+          <a
+            href="#projects"
+            className={`inline-block px-4 py-3 font-semibold rounded-lg shadow transition duration-300 text-lg ${
+              darkMode
+                ? "border-2 border-sky-600 text-black-900 hover:bg-sky-100"
+                : "border-2 border-sky-600 text-white-900 hover:bg-sky-100"
+            }`}
+          >
+            <span className="animate__animated animate__bounce">
+              Get my Resume
+            </span>
+          </a>
+        </div>
+
         <div className="mt-4 -mb-8 flex justify-center space-x-4">
           <a
             href="https://www.linkedin.com/in/your-profile"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin className="text-3xl text-sky-600 hover:text-blue-400 transition" />{" "}
-            {/* Changed color here to sky-600 */}
+            <FaLinkedin className="text-3xl text-sky-600 hover:text-blue-400 transition" />
           </a>
           <a
             href="https://github.com/your-profile"

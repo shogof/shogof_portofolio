@@ -111,7 +111,9 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className="flex flex-col items-center space-y-4"
         >
-          <div className="w-full md:w-96">
+          <div className="w-full max-w-xs">
+            {" "}
+            {/* Adjusted for responsiveness */}
             <label className="block mb-1 text-sm font-semibold" htmlFor="name">
               Name
             </label>
@@ -130,7 +132,9 @@ const Contact = () => {
               }`}
             />
           </div>
-          <div className="w-full md:w-96">
+          <div className="w-full max-w-xs">
+            {" "}
+            {/* Adjusted for responsiveness */}
             <label className="block mb-1 text-sm font-semibold" htmlFor="email">
               Email
             </label>
@@ -152,7 +156,9 @@ const Contact = () => {
               </p>
             )}
           </div>
-          <div className="w-full md:w-96">
+          <div className="w-full max-w-xs">
+            {" "}
+            {/* Adjusted for responsiveness */}
             <label
               className="block mb-1 text-sm font-semibold"
               htmlFor="message"
@@ -172,17 +178,17 @@ const Contact = () => {
           </div>
           {error && <p className="text-red-500">{error}</p>}
           {successMessage && <p className="text-green-500">{successMessage}</p>}
-          <div className="flex space-x-4">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
             <button
               type="submit"
-              className="w-48 bg-sky-600 text-white py-2 rounded hover:bg-sky-700 transition duration-300 ease-in-out"
+              className="px-11 w-full md:w-48 bg-sky-600 text-white py-2 rounded hover:bg-sky-700 transition duration-300 ease-in-out"
             >
               Send Message
             </button>
             <button
               type="button"
               onClick={handleReset}
-              className="bg-gray-300 w-48 text-gray-800 py-2 rounded hover:bg-gray-400 transition duration-300 ease-in-out"
+              className="w-full md:w-48 bg-gray-300 text-gray-800 py-2 rounded hover:bg-gray-400 transition duration-300 ease-in-out"
             >
               Reset
             </button>
