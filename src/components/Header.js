@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { useTheme } from "../ThemeContext";
-import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa"; // Importing icons
+import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
   const { darkMode, toggleDarkMode } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Toggle the menu visibility for mobile view
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
@@ -30,7 +29,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Navigation Menu */}
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
@@ -38,7 +36,6 @@ const Header = () => {
           darkMode ? "bg-black text-white" : "bg-white text-black"
         }`}
       >
-        {/* Mobile Close Button */}
         <div className="absolute top-4 right-4 md:hidden">
           <button
             onClick={handleMenuToggle}
@@ -87,7 +84,6 @@ const Header = () => {
           </li>
         </ul>
 
-        {/* Dark Mode Toggle Button */}
         <div className="mt-4 md:mt-0 flex justify-end">
           <button
             onClick={toggleDarkMode}

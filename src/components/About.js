@@ -1,4 +1,3 @@
-// src/components/About.js
 import React, { useEffect, useState } from "react";
 import { useTheme } from "../ThemeContext";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";

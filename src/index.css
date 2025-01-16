@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-} */
-
-/* Add this to your CSS file */
-/* Add this to your CSS file */
 @keyframes modal-animation {
   0% {
     opacity: 0;

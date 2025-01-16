@@ -198,10 +198,10 @@ const Project = () => {
       <Swiper
         ref={swiperRef}
         spaceBetween={-30}
-        slidesPerView={1} // Default to 1 slide for mobile
+        slidesPerView={1}
         breakpoints={{
-          640: { slidesPerView: 1 }, // Show 1 slide on mobile (below 640px)
-          1024: { slidesPerView: 2 }, // Show 2 slides on desktop (above 640px)
+          640: { slidesPerView: 1 },
+          1024: { slidesPerView: 2 },
         }}
         style={{
           display: "flex",
@@ -220,33 +220,28 @@ const Project = () => {
               } rounded-3xl my-4 py-7 px-5 mx-10 shadow-lg flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
               style={{ width: "90%", minHeight: "400px", maxHeight: "500px" }}
             >
-              {/* Mobile: Only show the image and button */}
               <div className="block md:hidden">
                 <img
                   src={project.image}
                   alt="Project Preview"
-                  className="w-full h-64 object-cover rounded-xl mb-6" // Ensure the image fills the space well
+                  className="w-full h-64 object-cover rounded-xl mb-6"
                 />
                 <button
-                  onClick={() => handleOpenPopup(project)} // Open the modal
+                  onClick={() => handleOpenPopup(project)}
                   className={`${
                     darkMode ? "bg-sky-500" : "bg-sky-500"
-                  } text-white py-3 px-6 rounded-full shadow-md hover:bg-sky-600 transition-all duration-300 transform hover:scale-105`} // Make button bigger on mobile
+                  } text-white py-3 px-6 rounded-full shadow-md hover:bg-sky-600 transition-all duration-300 transform hover:scale-105`}
                 >
                   See Project
                 </button>
               </div>
 
-              {/* Desktop: Show all content */}
               <div className="hidden md:block">
-                {/* Project Image */}
                 <img
                   src={project.image}
                   alt="Project Preview"
                   className="w-full h-48 object-cover rounded-xl mb-6"
                 />
-
-                {/* Project Title */}
                 <h3
                   className={`text-2xl font-semibold mb-3 ${
                     darkMode
@@ -257,7 +252,6 @@ const Project = () => {
                   {project.title}
                 </h3>
 
-                {/* Creator Info */}
                 <div
                   className={`${
                     darkMode ? "text-gray-400" : "text-gray-500"
@@ -296,7 +290,6 @@ const Project = () => {
                   </div>
                 </div>
 
-                {/* Short Description */}
                 <p
                   className={`${
                     darkMode ? "text-gray-300" : "text-gray-700"
@@ -305,9 +298,8 @@ const Project = () => {
                   {project.descriptionShort}
                 </p>
 
-                {/* Call to Action Button */}
                 <button
-                  onClick={() => handleOpenPopup(project)} // Open the modal
+                  onClick={() => handleOpenPopup(project)}
                   className={`${
                     darkMode ? "bg-sky-500" : "bg-sky-500"
                   } text-white md:w-full py-2 px-4 rounded-full shadow-md hover:bg-sky-600 transition-all duration-300 transform hover:scale-105`}
@@ -320,13 +312,12 @@ const Project = () => {
         ))}
       </Swiper>
 
-      {/* Custom Navigation Buttons */}
       <div className="flex justify-between -my-72 relative">
         <button
           className={`flex items-center justify-center w-10 h-20 ${
             darkMode ? "bg-sky-500" : "bg-sky-500"
           } text-white rounded-full hover:bg-sky-600 transition duration-300`}
-          onClick={() => swiperRef.current.swiper.slidePrev()} // Previous slide
+          onClick={() => swiperRef.current.swiper.slidePrev()}
         >
           <FontAwesomeIcon icon={faChevronLeft} className="text-lg" />
         </button>
@@ -334,13 +325,12 @@ const Project = () => {
           className={`flex items-center justify-center w-10 h-20 ${
             darkMode ? "bg-sky-500" : "bg-sky-500"
           } text-white rounded-full hover:bg-sky-600 transition duration-300`}
-          onClick={() => swiperRef.current.swiper.slideNext()} // Next slide
+          onClick={() => swiperRef.current.swiper.slideNext()}
         >
           <FontAwesomeIcon icon={faChevronRight} className="text-lg" />
         </button>
       </div>
 
-      {/* Modal for Project Details */}
       {selectedProject && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm z-50">
           <div
@@ -348,7 +338,6 @@ const Project = () => {
               darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
             } rounded-2xl p-6 w-11/12 md:w-3/4 lg:w-2/3 flex flex-col relative shadow-2xl`}
           >
-            {/* Title */}
             <h2
               className={`text-3xl font-semibold ${
                 darkMode ? "text-sky-400" : "text-sky-500"
@@ -357,7 +346,6 @@ const Project = () => {
               {selectedProject.title}
             </h2>
 
-            {/* Additional Text under the title */}
             <p
               className={`${
                 darkMode ? "text-gray-400" : "text-gray-600"
@@ -367,16 +355,13 @@ const Project = () => {
               {selectedProject.creatorYear}
             </p>
 
-            {/* Full-width Image */}
             <img
               src={selectedProject.image}
               alt="Project Full"
-              className="w-full h-56 sm:h-64 md:h-72 lg:h-64 object-cover rounded-xl mb-6" // Adjust height on mobile and other screens
+              className="w-full h-56 sm:h-64 md:h-72 lg:h-64 object-cover rounded-xl mb-6"
             />
 
-            {/* Flex container for description (left) and languages (right) */}
             <div className="flex flex-col md:flex-row mb-6">
-              {/* Left side: Description */}
               <div className="w-full md:w-2/3 pr-6 mb-4 md:mb-0">
                 <p
                   className={`${
@@ -387,7 +372,6 @@ const Project = () => {
                 </p>
               </div>
 
-              {/* Right side: Languages */}
               <div className="w-full md:w-1/3 pl-6">
                 <div className="flex flex-wrap gap-x-2 gap-y-2 text-gray-700 mb-4">
                   <span
@@ -420,49 +404,45 @@ const Project = () => {
                   </span>
                 </div>
 
-                {/* Border between languages and buttons */}
                 <div className="border-t border-sky-200 mt-4"></div>
 
-                {/* Buttons */}
                 <div className="flex space-x-4 mt-4">
-                  <button
-                    onClick={() =>
-                      window.open(selectedProject.liveLink, "_blank")
-                    }
+                  <a
+                    href={selectedProject.sourceLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${
+                      darkMode ? "bg-gray-700" : "bg-gray-800"
+                    } flex items-center text-white py-2 px-4 rounded-full hover:bg-sky-600`}
+                  >
+                    <FontAwesomeIcon icon={faGithub} className="mr-2" />
+                    Source Code
+                  </a>
+                  <a
+                    href={selectedProject.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`${
                       darkMode ? "bg-sky-500" : "bg-sky-500"
-                    } text-white py-1 px-3 rounded-full shadow-lg hover:bg-sky-600 transition-all duration-300 transform hover:scale-105 border border-transparent hover:border-sky-500 text-sm`}
+                    } flex items-center text-white py-2 px-4 rounded-full hover:bg-sky-600`}
                   >
-                    See Live{" "}
                     <FontAwesomeIcon
                       icon={faExternalLinkAlt}
-                      className="ml-2"
+                      className="mr-2"
                     />
-                  </button>
-                  <button
-                    onClick={() =>
-                      window.open(selectedProject.sourceLink, "_blank")
-                    }
-                    className={`${
-                      darkMode ? "bg-sky-500" : "bg-sky-500"
-                    } text-white py-1 px-3 rounded-full shadow-lg hover:bg-sky-600 transition-all duration-300 transform hover:scale-105 border border-transparent hover:border-sky-500 text-sm`}
-                  >
-                    See Source{" "}
-                    <FontAwesomeIcon icon={faGithub} className="ml-2" />
-                  </button>
+                    Live Demo
+                  </a>
                 </div>
+                <button
+                  onClick={handleClosePopup}
+                  className={`${
+                    darkMode ? "bg-sky-500" : "bg-sky-500"
+                  } text-white py-2 px-4 rounded-full mt-4 shadow-md hover:bg-sky-600 transition-all duration-300 transform hover:scale-105`}
+                >
+                  Close
+                </button>
               </div>
             </div>
-
-            {/* Close Button */}
-            <button
-              onClick={handleClosePopup} // Close the modal
-              className={`${
-                darkMode ? "bg-sky-500" : "bg-sky-500"
-              } absolute top-2 right-2 bg-transparent text-gray-700 p-2 rounded-full hover:bg-sky-600`}
-            >
-              <span className="text-3xl">&times;</span>
-            </button>
           </div>
         </div>
       )}

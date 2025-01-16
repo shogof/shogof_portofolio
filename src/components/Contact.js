@@ -1,4 +1,3 @@
-// src/components/Contact.js
 import React, { useState, useEffect } from "react";
 import { useTheme } from "../ThemeContext";
 
@@ -158,7 +157,6 @@ const Contact = () => {
           </div>
           <div className="w-full max-w-xs">
             {" "}
-            {/* Adjusted for responsiveness */}
             <label
               className="block mb-1 text-sm font-semibold"
               htmlFor="message"
