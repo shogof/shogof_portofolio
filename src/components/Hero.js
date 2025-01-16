@@ -48,8 +48,8 @@ const Hero = () => {
           href="#projects"
           className={`mt-6 inline-block px-8 py-3 font-semibold rounded-lg shadow transition duration-300 ${
             darkMode
-              ? "bg-[#4fd1c5] text-white hover:bg-[#38b2ac]"
-              : "bg-[#4fd1c5] text-white hover:bg-[#38b2ac]"
+              ? "bg-sky-600 text-white hover:bg-sky-500"
+              : "bg-sky-600 text-white hover:bg-sky-500"
           }`}
         >
           <span className="animate__animated animate__bounce">

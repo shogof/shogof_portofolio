@@ -19,7 +19,7 @@ const Header = () => {
           <li>
             <a
               href="#projects"
-              className="text-lg font-semibold hover:text-[#4fd1c5] transition duration-200"
+              className="text-lg font-semibold hover:text-sky-600 transition duration-200"
             >
               Projects
             </a>
@@ -27,7 +27,7 @@ const Header = () => {
           <li>
             <a
               href="#about"
-              className="text-lg font-semibold hover:text-[#4fd1c5] transition duration-200"
+              className="text-lg font-semibold hover:text-sky-600 transition duration-200"
             >
               About
             </a>
@@ -35,7 +35,7 @@ const Header = () => {
           <li>
             <a
               href="#contact"
-              className="text-lg font-semibold hover:text-[#4fd1c5] transition duration-200"
+              className="text-lg font-semibold hover:text-sky-600 transition duration-200"
             >
               Contact
             </a>
@@ -48,8 +48,8 @@ const Header = () => {
         onClick={toggleDarkMode}
         className={`px-4 py-2 border rounded-lg text-lg font-semibold transition duration-300 ${
           darkMode
-            ? "border-white text-white hover:bg-[#38b2ac] hover:text-gray-900"
-            : "border-gray-800 text-gray-800 hover:bg-[#38b2ac] hover:text-white"
+            ? "border-white text-white hover:bg-sky-500 hover:text-gray-900"
+            : "border-gray-800 text-gray-800 hover:bg-sky-500 hover:text-white"
         }`}
       >
         {darkMode ? "Light Mode" : "Dark Mode"}

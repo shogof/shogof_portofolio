@@ -135,9 +135,9 @@ const About = () => {
           darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"
         }`}
       >
-        <h2 className="text-5xl font-bold text-left mt-4 mb-8 text-teal-600">
+        <h2 className="text-5xl font-bold text-left mt-4 mb-8 text-sky-600">
           {" "}
-          {/* Changed color here */}
+          {/* Changed color here to sky-600 */}
           About Me
         </h2>
         <div className="flex flex-col items-center md:flex-row md:justify-center">
@@ -162,7 +162,7 @@ const About = () => {
                 onClick={() => setActiveTab("frontend")}
                 className={`px-4 py-2 rounded-l-lg ${
                   activeTab === "frontend"
-                    ? "bg-teal-600 text-white"
+                    ? "bg-sky-600 text-white"
                     : "bg-gray-200 text-gray-800"
                 }`}
               >
@@ -172,7 +172,7 @@ const About = () => {
                 onClick={() => setActiveTab("backend")}
                 className={`px-4 py-2 ${
                   activeTab === "backend"
-                    ? "bg-teal-600 text-white"
+                    ? "bg-sky-600 text-white"
                     : "bg-gray-200 text-gray-800"
                 }`}
               >
@@ -182,7 +182,7 @@ const About = () => {
                 onClick={() => setActiveTab("otherSkills")}
                 className={`px-4 py-2 rounded-r-lg ${
                   activeTab === "otherSkills"
-                    ? "bg-teal-600 text-white"
+                    ? "bg-sky-600 text-white"
                     : "bg-gray-200 text-gray-800"
                 }`}
               >
@@ -197,8 +197,8 @@ const About = () => {
           href="#projects"
           className={`mt-6 inline-block px-4 py-3 font-semibold rounded-lg shadow transition duration-300 text-lg ${
             darkMode
-              ? "border-2 border-teal-600 text-black-900 hover:bg-teal-100"
-              : "border-2 border-teal-600 text-white-900 hover:bg-teal-100"
+              ? "border-2 border-sky-600 text-black-900 hover:bg-sky-100"
+              : "border-2 border-sky-600 text-white-900 hover:bg-sky-100"
           }`}
         >
           <span className="animate__animated animate__bounce">
@@ -211,22 +211,22 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin className="text-3xl text-teal-600 hover:text-blue-400 transition" />{" "}
-            {/* Changed color here */}
+            <FaLinkedin className="text-3xl text-sky-600 hover:text-blue-400 transition" />{" "}
+            {/* Changed color here to sky-600 */}
           </a>
           <a
             href="https://github.com/your-profile"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub className="text-3xl text-teal-600 hover:text-gray-600 transition" />
+            <FaGithub className="text-3xl text-sky-600 hover:text-gray-600 transition" />
           </a>
           <a
             href="https://twitter.com/your-profile"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter className="text-teal-600 text-3xl hover:text-blue-300 transition" />
+            <FaTwitter className="text-sky-600 text-3xl hover:text-blue-300 transition" />
           </a>
         </div>
       </div>
