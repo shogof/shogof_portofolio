@@ -15,14 +15,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "../ThemeContext";
 
-import work1 from "./images/work-1.png";
-import work2 from "./images/work-2.png";
-import work3 from "./images/work-3.png";
-import work4 from "./images/work-4.png";
-import work5 from "./images/work-5.png";
-import work6 from "./images/work-6.png";
-import work7 from "./images/work-7.png";
-import work8 from "./images/work-8.png";
+import work1 from "../images/work-1.png";
+import work2 from "../images/work-2.png";
+import work3 from "../images/work-3.png";
+import work4 from "../images/work-4.png";
+import work5 from "../images/work-5.png";
+import work6 from "../images/work-6.png";
+import work7 from "../images/work-7.png";
+import work8 from "../images/work-8.png";
 
 const projectCard = [
   {
@@ -32,16 +32,16 @@ const projectCard = [
     creatorName: "Shogof Azar",
     creatorPos: "Full Stack Dev",
     creatorYear: "2024",
-    descriptionShort: "A web app enabling users to share their favorite spots.",
+    descriptionShort:
+      "Explore and manage SpaceX rockets, missions, and dragons with an immersive web app.",
     descriptionLong:
-      "A comprehensive web app enabling users to sign up, log in, and effortlessly share their beloved destinations. Share detailed descriptions, addresses, and captivating pictures of your favorite spots with ease.",
-    liveLink: "https://space-travelers-bvhc8jnqg-shogofs-projects.vercel.app/",
+      "Space Travelers Hub lets users interact with SpaceX rockets, missions, and dragons, track participation via profiles, and manage bookings. Built with React, Redux, and Tailwind CSS for a seamless experience.",
+    liveLink: "https://space-travelers-gqabm96uu-shogofs-projects.vercel.app/",
     sourceLink: "https://github.com/shogof/space-travelers-hub",
     language1: "JavaScript",
     language2: "React",
     language3: "Tailwind CSS",
     language4: "Redux",
-    language5: "Axios",
   },
   {
     id: "2",
@@ -50,26 +50,65 @@ const projectCard = [
     creatorName: "Shogof Azar",
     creatorPos: "Full Stack Dev",
     creatorYear: "2023",
-    descriptionShort: "A front-end app to book Tesla car test drives.",
+    descriptionShort:
+      "A tool to search and explore detailed information about Pokémon with advanced filters.",
     descriptionLong:
-      "The app allows admin users to create and delete cars from the availability list. Users can reserve Tesla cars by model, city, and time.",
-    liveLink: "https://tesla-car-booking-front.onrender.com/",
+      "The Pokémon Search App allows users to search Pokémon by name, type, or abilities, and view their stats, moves, and evolutions. Featuring an intuitive interface with advanced filtering options.",
+    liveLink: "https://shogof.github.io/Build-a-Pok-mon-Search-App/",
     sourceLink: "https://github.com/shogof/Build-a-Pok-mon-Search-App",
     language1: "HTML",
     language2: "CSS",
-    language3: "Javascript",
+    language3: "JavaScript",
     language4: "API",
   },
   {
     id: "3",
     image: work3,
+    title: "JavaScript-Capstone-Portfolio 🚀",
+    creatorName: "Shogof Azar",
+    creatorPos: "Full Stack Dev",
+    creatorYear: "2023",
+    descriptionShort:
+      "Interactive personal portfolio highlighting front-end development skills and projects.",
+    descriptionLong:
+      "The JavaScript-Capstone-Portfolio is the final project for my JavaScript course, showcasing my front-end development skills, projects, and achievements in an engaging personal portfolio.",
+    liveLink: "https://shogof.github.io/JavaScript-Capstone-project-Portfolio/",
+    sourceLink: "https://github.com/shogof/js-Capstone-Project-Portfolio",
+    language1: "HTML",
+    language2: "CSS",
+    language3: "JavaScript",
+    language4: "GitHub",
+  },
+  {
+    id: "4",
+    image: work4,
+    title: "Weather App",
+    creatorName: "Shogof Azar",
+    creatorPos: "Front End Dev",
+    creatorYear: "2023",
+    descriptionShort:
+      "React-based drum machine app to create beats with interactive pads, keyboard, and sound kits.",
+    descriptionLong:
+      "The Drum Machine is a React app where users create beats with clickable pads or keyboard keys (Q, W, E, A, S, D, Z, X, C). It features power toggle, volume control, and sound kit switching, offering a fun music-making experience.",
+    liveLink:
+      "https://markdown-previewer-dvjl-4scuzoxej-shogofs-projects.vercel.app/",
+    sourceLink: "https://github.com/shogof/drum-machine-p",
+    language1: "React",
+    language2: "JavaScript",
+    language3: "CSS",
+    language4: "HTML",
+  },
+  {
+    id: "5",
+    image: work5,
     title: "Phone number validation 🚀",
     creatorName: "Shogof Azar",
     creatorPos: "Front End Dev",
     creatorYear: "2024",
-    descriptionShort: "Track the air pollution levels of countries worldwide.",
+    descriptionShort:
+      "A global phone number validator using regex patterns for Iran, Afghanistan, and the USA.",
     descriptionLong:
-      "This application provides current, forecast, and historical air pollution data for multiple countries. Users can check the pollution index of their country by simply scrolling or searching for it using the search bar.",
+      "The Phone Number Validation project robustly validates phone numbers for Iran, Afghanistan, and the USA using modern JavaScript and regex patterns to ensure accuracy and proper formatting.",
     liveLink: "https://shogof.github.io/phone-number-validattion/",
     sourceLink: "https://github.com/shogof/phone-number-validattion",
     language1: "HTML",
@@ -79,94 +118,58 @@ const projectCard = [
   },
   {
     id: "6",
-    image: work4,
+    image: work6,
     title: "Dior",
     creatorName: "Shogof Azar",
     creatorPos: "Front End Dev",
     creatorYear: "2023",
     descriptionShort:
-      "A web app that fetches data from an API to display items.",
+      "A responsive Dior-themed website built with Next.js, featuring interactive elements.",
     descriptionLong:
-      "Our project is a web app that fetches data from an API, displaying items and allowing users to like, comment, and reserve them. It is built with JavaScript and uses the Involvement API to track interactions.",
+      "A Dior-inspired website built with Next.js and Tailwind CSS, focusing on performance, responsive design, and dynamic content. It provides smooth user experiences with interactive elements and modern styling.",
     liveLink: "https://nextjs-dior.vercel.app",
     sourceLink: "https://github.com/shogof/nextjs-dior",
-    language1: "JavaScript",
-    language2: "API",
+    language1: "Nextjs",
+    language2: "Tailwind CSS",
     language3: "CSS",
     language4: "HTML",
-    language5: "",
-  },
-  {
-    id: "5",
-    image: work5,
-    title: "E-commerce Website",
-    creatorName: "Shogof Azar",
-    creatorPos: "Full Stack Dev",
-    creatorYear: "2023",
-    descriptionShort: "An e-commerce to browse products and make purchases.",
-    descriptionLong:
-      "The e-commerce website enables users to browse products, add them to their cart, and complete purchases securely. It includes product filtering, search functionality, and user authentication.",
-    liveLink: "https://ecommerce-example.onrender.com",
-    sourceLink: "https://github.com/hafiz1379/ecommerce-example",
-    language1: "React",
-    language2: "Node.js",
-    language3: "MongoDB",
-    language4: "Express",
-    language5: "Redux",
-  },
-  {
-    id: "4",
-    image: work6,
-    title: "Weather App",
-    creatorName: "Shogof Azar",
-    creatorPos: "Front End Dev",
-    creatorYear: "2023",
-    descriptionShort: "A weather app to show real-time weather information.",
-    descriptionLong:
-      "The weather app fetches real-time weather data and displays it to the users with an easy-to-understand interface. It shows current weather, forecasts, and other related information.",
-    liveLink: "https://weather-app-example.onrender.com",
-    sourceLink: "https://github.com/hafiz1379/weather-app-example",
-    language1: "React",
-    language2: "Node.js",
-    language3: "CSS",
-    language4: "API",
-    language5: "",
   },
   {
     id: "7",
     image: work7,
-    title: "Blog Website",
+    title: "Plaindrom Cheeker",
     creatorName: "Shogof Azar",
     creatorPos: "Full Stack Dev",
     creatorYear: "2024",
-    descriptionShort: "A blog platform for users to share their thoughts.",
+    descriptionShort:
+      "A simple web app to check if a word or phrase is a palindrome using HTML, CSS, and JavaScript.",
     descriptionLong:
-      "The blog platform allows users to write and share their thoughts with others. It includes features like commenting, liking, and searching for blog posts.",
-    liveLink: "https://blog-website.onrender.com",
-    sourceLink: "https://github.com/hafiz1379/blog-website",
-    language1: "React",
-    language2: "Node.js",
-    language3: "Express",
-    language4: "MongoDB",
-    language5: "CSS",
+      "This web app checks if a word or phrase is a palindrome. Built with HTML, CSS, and JavaScript, it allows users to input text and check whether it reads the same forwards and backwards, offering a clean, user-friendly interface.",
+    liveLink: "https://shogof.github.io/Plaindrom-Checker/",
+    sourceLink: "https://github.com/shogof/Plaindrom-Checker",
+    language1: "HTML",
+    language2: "CSS",
+    language3: "JavaScript",
+    language4: "API",
   },
   {
     id: "8",
     image: work8,
-    title: "Task Manager",
+    title: "MarkDown Previewer",
     creatorName: "Shogof Azar",
     creatorPos: "Full Stack Dev",
     creatorYear: "2024",
-    descriptionShort: "A task manager app for organizing and tracking tasks.",
+    descriptionShort:
+      "React-based app for writing and previewing Markdown in real-time with a split-screen interface.",
     descriptionLong:
-      "The task manager app allows users to create, edit, and delete tasks. It includes task prioritization, due dates, and categories to keep tasks organized.",
-    liveLink: "https://task-manager-app.onrender.com",
-    sourceLink: "https://github.com/hafiz1379/task-manager-app",
-    language1: "React",
-    language2: "Node.js",
-    language3: "MongoDB",
-    language4: "Express",
-    language5: "CSS",
+      "This React-based Markdown Previewer allows users to write and preview Markdown in real-time. The split-screen interface displays the typed content on one side and the rendered HTML on the other, offering a smooth interactive experience.",
+    liveLink:
+      "https://markdown-previewer-6pio-6pikth3h0-shogofs-projects.vercel.app/",
+    sourceLink: "https://github.com/shogof/markdown-previewer",
+    language1: "JavaScript",
+    language2: "GitHub",
+    language3: "CSS",
+    language4: "HTML",
   },
 ];
 
@@ -181,10 +184,11 @@ const Project = () => {
   return (
     <div
       className={`container mx-auto p-8 mt-16 ${
-        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"
+        darkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-800"
       } h-[700px]`}
     >
       <h1
+        id="projects"
         className={`text-5xl font-extrabold text-center ${
           darkMode ? "text-sky-400" : "text-sky-500"
         } mb-6`}
@@ -306,7 +310,7 @@ const Project = () => {
                   onClick={() => handleOpenPopup(project)} // Open the modal
                   className={`${
                     darkMode ? "bg-sky-500" : "bg-sky-500"
-                  } text-white py-2 px-4 rounded-full shadow-md hover:bg-sky-600 transition-all duration-300 transform hover:scale-105`}
+                  } text-white md:w-full py-2 px-4 rounded-full shadow-md hover:bg-sky-600 transition-all duration-300 transform hover:scale-105`}
                 >
                   See Project
                 </button>
@@ -413,13 +417,6 @@ const Project = () => {
                     } text-white py-1 px-2 text-xs rounded-full`}
                   >
                     {selectedProject.language4}
-                  </span>
-                  <span
-                    className={`${
-                      darkMode ? "bg-sky-500" : "bg-sky-500"
-                    } text-white py-1 px-2 text-xs rounded-full`}
-                  >
-                    {selectedProject.language5}
                   </span>
                 </div>
 

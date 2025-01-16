@@ -11,7 +11,7 @@ const About = () => {
   const skills = {
     frontend: [
       { name: "HTML", percent: 100, color: "#cc6699" },
-      { name: "CSS", percent: 100, color: "#31A8FF" },
+      { name: "CSS", percent: 100, color: "#FF6C37" },
       { name: "JavaScript", percent: 80, color: "#f7df1e" },
       { name: "React", percent: 85, color: "#61dafb" },
       { name: "Redux", percent: 80, color: "#764abc" },
@@ -132,15 +132,15 @@ const About = () => {
       <div
         id="about"
         className={`pb-20 pt-16 px-4 md:px-8 mx-0 center transition-all duration-300 shadow-lg my-24 rounded-lg ${
-          darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"
+          darkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-800"
         }`}
       >
-        <h2 className="text-5xl font-bold text-left mt-4 mb-8 text-sky-600">
+        <h2 className="text-5xl font-bold text-left ml-2 mt-4 mb-8 text-sky-600">
           About Me
         </h2>
         <div className="flex flex-col items-center md:flex-row md:justify-between">
           <div className="md:max-w-xl mb-8 md:mb-0">
-            <p className="mt-0 text-lg m-5 max-w-full mx-auto text-justify">
+            <p className="mt-0 text-lg m-5 ml-2 max-w-full mx-auto text-justify">
               As a web developer, I am passionate about creating user-friendly
               websites and web applications. With a strong foundation in
               front-end technologies like HTML, CSS, JavaScript, and frameworks
@@ -198,8 +198,8 @@ const About = () => {
             href="#projects"
             className={`inline-block px-4 py-3 font-semibold rounded-lg shadow transition duration-300 text-lg ${
               darkMode
-                ? "border-2 border-sky-600 text-black-900 hover:bg-sky-100"
-                : "border-2 border-sky-600 text-white-900 hover:bg-sky-100"
+                ? "border-2 border-sky-600 text-black-900 hover:bg-sky-400"
+                : "border-2 border-sky-600 text-white-900 hover:bg-sky-400"
             }`}
           >
             <a

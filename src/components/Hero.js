@@ -8,14 +8,14 @@ const Hero = () => {
   const { darkMode } = useTheme();
 
   return (
-    <div
+    <div id="hero"
       className={`relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden ${
-        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"
+        darkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-800"
       }`}
     >
       <video
         className="absolute top-0 left-0 w-full h-3/4 object-cover"
-        src={darkMode ? "/ww.mp4" : "/7989667-hd_1080_1920_25fps.mp4"}
+        src={darkMode ? "/v6.mp4" : "/v4.mp4"}
         autoPlay
         loop
         muted
@@ -23,11 +23,11 @@ const Hero = () => {
       />
       <div
         className={`relative p-6 max-w-4xl mx-auto md:mt-16 mt-0 bg-opacity-30 rounded-lg shadow-lg backdrop-filter backdrop-blur-lg ${
-          darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+          darkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-900"
         }`}
       >
         <h1
-          className="text-white text-4xl md:text-5xl font-bold animate__animated animate__fadeInDown mb-4"
+          className="text-5xl md:text-5xl font-bold animate__animated animate__fadeInDown mb-4"
           style={{
             textShadow: darkMode ? "2px 2px 4px rgba(0,0,0,0.7)" : "none",
           }}
@@ -64,21 +64,21 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin className="text-2xl md:text-3xl hover:text-blue-400 transition" />
+            <FaLinkedin className="text-2xl md:text-3xl hover:text-sky-400 transition" />
           </a>
           <a
             href="https://github.com/shogof"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub className="text-2xl md:text-3xl hover:text-gray-600 transition" />
+            <FaGithub className="text-2xl md:text-3xl hover:text-sky-600 transition" />
           </a>
           <a
             href="https://twitter.com/your-profile"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter className="text-2xl md:text-3xl hover:text-blue-300 transition" />
+            <FaTwitter className="text-2xl md:text-3xl hover:text-sky-300 transition" />
           </a>
         </div>
       </div>
