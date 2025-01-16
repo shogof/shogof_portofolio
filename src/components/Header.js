@@ -10,6 +10,11 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Close the mobile menu when a link is clicked
+  const closeMenuOnClick = () => {
+    if (menuOpen) setMenuOpen(false);
+  };
+
   return (
     <header
       className={`fixed w-full top-0 left-0 flex justify-between items-center p-4 z-10 transition-all duration-300 ${
@@ -49,6 +54,7 @@ const Header = () => {
           <li>
             <a
               href="#hero"
+              onClick={closeMenuOnClick}
               className="text-lg font-semibold hover:text-sky-600 transition-all duration-200"
               aria-label="Go to home section"
             >
@@ -58,6 +64,7 @@ const Header = () => {
           <li>
             <a
               href="#projects"
+              onClick={closeMenuOnClick}
               className="text-lg font-semibold hover:text-sky-600 transition-all duration-200"
               aria-label="Go to projects section"
             >
@@ -67,6 +74,7 @@ const Header = () => {
           <li>
             <a
               href="#about"
+              onClick={closeMenuOnClick}
               className="text-lg font-semibold hover:text-sky-600 transition-all duration-200"
               aria-label="Go to about section"
             >
@@ -76,6 +84,7 @@ const Header = () => {
           <li>
             <a
               href="#contact"
+              onClick={closeMenuOnClick}
               className="text-lg font-semibold hover:text-sky-600 transition-all duration-200"
               aria-label="Go to contact section"
             >
