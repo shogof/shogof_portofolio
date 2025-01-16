@@ -14,7 +14,7 @@ const Hero = () => {
     >
       <video
         className="absolute top-0 left-0 w-full h-3/4 object-cover"
-        src={darkMode ? "/v6.mp4" : "/v4.mp4"}
+        src={darkMode ? "/v6.mp4" : "/v2.mp4"}
         autoPlay
         loop
         muted
