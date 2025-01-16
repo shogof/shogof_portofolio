@@ -37,7 +37,7 @@ const Hero = () => {
           I'm Shogofa Azar, a Full-stack web developer with extensive experience
           in building efficient software applications. With over 1500+ hours of
           development, I specialize in React, Redux, JavaScript, Node.js,
-          Next.js, TypeScript, Tailwind CSS, Bootstrap, Sass, MongoDB, APIs,
+          Next.js, TypeScript, Tailwind CSS, Bootstrap, Html, Sass, MongoDB, APIs,
           Figma, and Animation Libraries to create high-quality web solutions.
         </p>
         <p className="mt-2 text-sm md:text-md italic animate__animated animate__fadeIn mb-4 animate__delay-2s">
