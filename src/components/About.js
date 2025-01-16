@@ -202,29 +202,33 @@ const About = () => {
                 : "border-2 border-sky-600 text-white-900 hover:bg-sky-100"
             }`}
           >
-            <span className="animate__animated animate__bounce">
+            <a
+              href="/Shegofa Developer CV.pdf"
+              download={"Shegofa Developer CV.pdf"}
+              className="animate__animated animate__bounce"
+            >
               Get my Resume
-            </span>
+            </a>
           </a>
         </div>
 
         <div className="mt-4 -mb-8 flex justify-center space-x-4">
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/shegofa-developer-aa362030b"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin className="text-3xl text-sky-600 hover:text-blue-400 transition" />
           </a>
           <a
-            href="https://github.com/your-profile"
+            href="https://github.com/shogof"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub className="text-3xl text-sky-600 hover:text-gray-600 transition" />
           </a>
           <a
-            href="https://twitter.com/your-profile"
+            href="https://www.facebook.com/profile.php?id=61559852199772&mibextid=ZbWKwL"
             target="_blank"
             rel="noopener noreferrer"
           >

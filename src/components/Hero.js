@@ -15,7 +15,7 @@ const Hero = () => {
     >
       <video
         className="absolute top-0 left-0 w-full h-3/4 object-cover"
-        src={darkMode ? "/ww.mp4" : "/e.mp4"}
+        src={darkMode ? "/ww.mp4" : "/7989667-hd_1080_1920_25fps.mp4"}
         autoPlay
         loop
         muted
@@ -27,7 +27,7 @@ const Hero = () => {
         }`}
       >
         <h1
-          className="text-4xl md:text-5xl font-bold animate__animated animate__fadeInDown mb-4"
+          className="text-white text-4xl md:text-5xl font-bold animate__animated animate__fadeInDown mb-4"
           style={{
             textShadow: darkMode ? "2px 2px 4px rgba(0,0,0,0.7)" : "none",
           }}
@@ -60,14 +60,14 @@ const Hero = () => {
         </div>
         <div className="mt-8 flex justify-center space-x-4">
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/shegofa-developer-aa362030b"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin className="text-2xl md:text-3xl hover:text-blue-400 transition" />
           </a>
           <a
-            href="https://github.com/your-profile"
+            href="https://github.com/shogof"
             target="_blank"
             rel="noopener noreferrer"
           >
