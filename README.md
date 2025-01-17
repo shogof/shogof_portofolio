@@ -1,4 +1,4 @@
-# 🌌 My Portfolio Project 🚀
+# My Portfolio Project 🚀
 
 Welcome to my portfolio project, a comprehensive web application designed to showcase my skills and projects in web development. This platform provides a detailed look at the applications and tools I've developed.
 
@@ -38,7 +38,7 @@ This project highlights my skills in front-end development, user experience desi
 - **JavaScript**: The core language for application logic and functionality.
 - **HTML/CSS**: For structuring and styling the application.
 - **Tailwind CSS**: A utility-first CSS framework that allows for rapid UI development.
-- **Netlify**: A platform for deployment and hosting.
+- **Vercel**: A platform for deployment and hosting.
 
 ## Getting Started
 
@@ -80,20 +80,21 @@ To prepare the application for production, follow these steps:
 
 ## Live Link
 
-Experience my portfolio live here: [Your Live Portfolio Link](#)
+Experience my portfolio live here: [Live Demo](https://shogof-portofolio-fdzfw9q8x-shogofs-projects.vercel.app/)
 
 ## GIF Showcase
 
-Check out the following GIF that demonstrates the key features of my portfolio:
+Check out the following Image that demonstrates the key features of my portfolio:
 
-![Portfolio GIF](link_to_gif)
+![Portfolio Image](src/images/s.jpg)
+
 
 ## Authors
 
 - **Your Name**
-  - GitHub: [@yourusername](https://github.com/shogof)
-  - LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/shegofa-developer-aa362030b)
-  - Email: [your.email@example.com](shogofadeveloper12@gmail.com)
+  - GitHub: [@shogof](https://github.com/shogof)
+  - LinkedIn: [LinkedIn](https://www.linkedin.com/in/shegofa-developer-aa362030b)
+  - Email: [email](shogofadeveloper12@gmail.com)
 
 ## Contributing
 
