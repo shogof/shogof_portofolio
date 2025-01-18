@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "../ThemeContext";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa"; // Import icons
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import "animate.css";
 
 const Hero = () => {
@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className={`relative flex h-full pt-36 md:pt-0 flex-col items-center justify-center md:min-h-screen text-center ovrflow-hidden ${
+      className={`relative flex h-full pt-10 md:pt-0 flex-col items-center justify-center md:min-h-screen text-center ovrflow-hidden ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-800"
       }`}
     >
@@ -27,7 +27,7 @@ const Hero = () => {
         }`}
       >
         <h1
-          className="text-5xl md:text-5xl font-bold animate__animated animate__fadeInDown mb-4"
+          className="text-4xl md:text-5xl font-bold animate__animated animate__fadeInDown mb-4"
           style={{
             textShadow: darkMode ? "2px 2px 4px rgba(0,0,0,0.7)" : "none",
           }}

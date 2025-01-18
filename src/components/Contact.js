@@ -94,11 +94,14 @@ const Contact = () => {
           darkMode ? "bg-gray-900 shadow-gray-700" : "bg-white shadow-gray-300"
         }`}
       >
-        <h2 id="contact" className="text-4xl font-bold text-center mb-4 transition duration-500 ease-in-out transform hover:translate-x-1 text-sky-600">
+        <h2
+          id="contact"
+          className="md:text-4xl text-3xl font-bold text-center mb-4 transition duration-500 ease-in-out transform hover:translate-x-1 text-sky-600"
+        >
           Contact Me
         </h2>
         <p
-          className={`mb-6 text-lg text-center ${
+          className={`mb-6 md:text-lg text-base text-justify md:text-center ${
             darkMode ? "text-gray-100" : "text-gray-600"
           }`}
         >

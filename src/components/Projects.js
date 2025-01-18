@@ -23,11 +23,18 @@ import work5 from "../images/work-5.png";
 import work6 from "../images/work-6.png";
 import work7 from "../images/work-7.png";
 import work8 from "../images/work-8.png";
+import work11 from "../images/work-11.png";
+import work22 from "../images/work-22.png";
+import work33 from "../images/work-33.png";
+import work44 from "../images/work-44.png";
+import work55 from "../images/work-55.png";
+import work88 from "../images/work-88.png";
 
 const projectCard = [
   {
     id: "1",
-    image: work1,
+    imageDesktop: work1,
+    imageMobile: work11,
     title: "Space Travelers Hub",
     creatorName: "Shogof Azar",
     creatorPos: "Full Stack Dev",
@@ -45,7 +52,8 @@ const projectCard = [
   },
   {
     id: "2",
-    image: work2,
+    imageDesktop: work2,
+    imageMobile: work22,
     title: "Build-a-Pok-mon-Search-App 🚀",
     creatorName: "Shogof Azar",
     creatorPos: "Full Stack Dev",
@@ -63,7 +71,8 @@ const projectCard = [
   },
   {
     id: "3",
-    image: work3,
+    imageDesktop: work3,
+    imageMobile: work33,
     title: "JavaScript-Capstone-Portfolio 🚀",
     creatorName: "Shogof Azar",
     creatorPos: "Full Stack Dev",
@@ -81,7 +90,8 @@ const projectCard = [
   },
   {
     id: "4",
-    image: work4,
+    imageDesktop: work4,
+    imageMobile: work44,
     title: "Weather App",
     creatorName: "Shogof Azar",
     creatorPos: "Front End Dev",
@@ -100,7 +110,8 @@ const projectCard = [
   },
   {
     id: "5",
-    image: work5,
+    imageDesktop: work5,
+    imageMobile: work55,
     title: "Phone number validation 🚀",
     creatorName: "Shogof Azar",
     creatorPos: "Front End Dev",
@@ -118,7 +129,8 @@ const projectCard = [
   },
   {
     id: "6",
-    image: work6,
+    imageDesktop: work6,
+    imageMobile: work6,
     title: "Dior",
     creatorName: "Shogof Azar",
     creatorPos: "Front End Dev",
@@ -136,7 +148,8 @@ const projectCard = [
   },
   {
     id: "7",
-    image: work7,
+    imageDesktop: work7,
+    imageMobile: work7,
     title: "Plaindrom Cheeker",
     creatorName: "Shogof Azar",
     creatorPos: "Full Stack Dev",
@@ -154,7 +167,8 @@ const projectCard = [
   },
   {
     id: "8",
-    image: work8,
+    imageDesktop: work8,
+    imageMobile: work88,
     title: "MarkDown Previewer",
     creatorName: "Shogof Azar",
     creatorPos: "Full Stack Dev",
@@ -183,13 +197,13 @@ const Project = () => {
 
   return (
     <div
-      className={`container mx-auto p-8 mt-16 ${
+      className={`container w-full mx-auto pt-32 md:p-8 md:mt-16 ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-800"
       } h-[700px]`}
     >
       <h1
         id="projects"
-        className={`text-5xl font-extrabold text-center ${
+        className={`md:text-5xl text-4xl font-extrabold text-center ${
           darkMode ? "text-sky-400" : "text-sky-500"
         } mb-6`}
       >
@@ -217,28 +231,30 @@ const Project = () => {
             <div
               className={`${
                 darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
-              } rounded-3xl my-4 py-7 px-5 mx-10 shadow-lg flex flex-col justify-between hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
-              style={{ width: "90%", minHeight: "400px", maxHeight: "500px" }}
+              } rounded-3xl md:my-4 px-0 md:py-7 md:px-5 md-mx-10 shadow-lg flex flex-col justify-between w-full hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
+              style={{ width: "83%", minHeight: "400px", maxHeight: "500px" }}
             >
               <div className="block md:hidden">
+                {/* Mobile image */}
                 <img
-                  src={project.image}
-                  alt="Project Preview"
-                  className="w-full h-64 object-cover rounded-xl mb-6"
+                  src={project.imageMobile}
+                  alt="Project Pr eview"
+                  className="w-full md:h-64 h-80 object-cover rounded-xl md:mb-6"
                 />
                 <button
                   onClick={() => handleOpenPopup(project)}
                   className={`${
                     darkMode ? "bg-sky-500" : "bg-sky-500"
-                  } text-white py-3 px-6 rounded-full shadow-md hover:bg-sky-600 transition-all duration-300 transform hover:scale-105`}
+                  } text-white py-2 m-4  px-6 md:py-3 md:px-6 rounded-full shadow-md hover:bg-sky-600 transition-all duration-300 transform hover:scale-105`}
                 >
                   See Project
                 </button>
               </div>
 
               <div className="hidden md:block">
+                {/* Desktop image */}
                 <img
-                  src={project.image}
+                  src={project.imageDesktop}
                   alt="Project Preview"
                   className="w-full h-48 object-cover rounded-xl mb-6"
                 />
@@ -312,9 +328,10 @@ const Project = () => {
         ))}
       </Swiper>
 
-      <div className="flex justify-between -my-72 relative">
+      {/* Left and Right arrows */}
+      <div className=" flex justify-between md:-my-72 -my-20 mx-4 relative">
         <button
-          className={`flex items-center justify-center w-10 h-20 ${
+          className={`flex items-center justify-center w-5 h-10 md:w-10 md:h-20 ${
             darkMode ? "bg-sky-500" : "bg-sky-500"
           } text-white rounded-full hover:bg-sky-600 transition duration-300`}
           onClick={() => swiperRef.current.swiper.slidePrev()}
@@ -322,7 +339,7 @@ const Project = () => {
           <FontAwesomeIcon icon={faChevronLeft} className="text-lg" />
         </button>
         <button
-          className={`flex items-center justify-center w-10 h-20 ${
+          className={`flex items-center justify-center w-5 h-10 md:w-10 md:h-20 ${
             darkMode ? "bg-sky-500" : "bg-sky-500"
           } text-white rounded-full hover:bg-sky-600 transition duration-300`}
           onClick={() => swiperRef.current.swiper.slideNext()}
@@ -330,15 +347,16 @@ const Project = () => {
           <FontAwesomeIcon icon={faChevronRight} className="text-lg" />
         </button>
       </div>
-      {/*model */}
+
+      {/* Popup Model */}
       {selectedProject && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm z-50">
           <div
             className={`${
               darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
-            } rounded-2xl p-6 w-11/12 md:w-3/4 lg:w-2/3 flex flex-col relative shadow-2xl`}
+            } rounded-2xl p-6 w-11/12 my-20 md:my-0 md:w-3/4 lg:w-2/3 flex flex-col relative shadow-2xl`}
           >
-            {/* Close icon with bigger size and hover effect */}
+            {/* Close icon */}
             <span
               onClick={handleClosePopup}
               className="absolute top-6 right-7 text-4xl text-sky-400 hover:text-sky-700 cursor-pointer transition-colors duration-300"
@@ -364,9 +382,9 @@ const Project = () => {
             </p>
 
             <img
-              src={selectedProject.image}
+              src={selectedProject.imageDesktop}
               alt="Project Full"
-              className="hover:scale-105 transform transition-all duration-300 ease-in-out w-full h-56 sm:h-64 md:h-72 lg:h-64 object-cover rounded-xl mb-6"
+              className="hover:scale-105 transform transition-all duration-300 ease-in-out w-full h-40 sm:h-64 md:h-72 lg:h-64 object-cover rounded-xl mb-6"
             />
 
             <div className="flex flex-col md:flex-row mb-6">
@@ -374,7 +392,7 @@ const Project = () => {
                 <p
                   className={`${
                     darkMode ? "text-gray-300" : "text-gray-700"
-                  } mb-4 text-justify text-lg font-['Poppins', sans-serif]`}
+                  } mb-4 text-justify text-base md:text-lg font-['Poppins', sans-serif]`}
                 >
                   {selectedProject.descriptionLong}
                 </p>

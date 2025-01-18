@@ -130,16 +130,16 @@ const About = () => {
       <div className="h-1"></div>
       <div
         id="about"
-        className={`pb-20 pt-16 px-4 md:px-8 mx-0 center transition-all duration-300 shadow-lg my-24 rounded-lg ${
+        className={`pb-20 pt-10 md:pt-16 px-4 md:px-8 mx-0 center transition-all duration-300 shadow-lg my-4 md:my-24 rounded-lg ${
           darkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-800"
         }`}
       >
-        <h2 className="text-5xl font-bold text-left ml-2 mt-4 mb-8 text-sky-600">
+        <h2 className="md:text-5xl text-4xl font-bold text-left ml-2 md:mt-4 mb-8 text-sky-600">
           About Me
         </h2>
         <div className="flex flex-col items-center md:flex-row md:justify-between">
           <div className="md:max-w-xl mb-8 md:mb-0">
-            <p className="mt-0 text-lg m-5 ml-2 max-w-full mx-auto text-justify">
+            <p className="mt-0 md:text-lg text-base m-5 ml-2 max-w-full mx-auto text-justify">
               As a web developer, I am passionate about creating user-friendly
               websites and web applications. With a strong foundation in
               front-end technologies like HTML, CSS, JavaScript, and frameworks
@@ -191,7 +191,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Centered Resume Button on Mobile Only */}
         <div className="flex justify-center mt-6 md:justify-start">
           <a
             href="#projects"
@@ -217,21 +216,21 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin className="text-3xl text-sky-600 hover:text-blue-400 transition" />
+            <FaLinkedin className="md:text-3xl text-xl text-sky-600 hover:text-blue-400 transition" />
           </a>
           <a
             href="https://github.com/shogof"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGithub className="text-3xl text-sky-600 hover:text-gray-600 transition" />
+            <FaGithub className="md:text-3xl text-xl text-sky-600 hover:text-gray-600 transition" />
           </a>
           <a
             href="https://www.facebook.com/profile.php?id=61559852199772&mibextid=ZbWKwL"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTwitter className="text-sky-600 text-3xl hover:text-blue-300 transition" />
+            <FaTwitter className="text-sky-600 md:text-3xl text-xl hover:text-blue-300 transition" />
           </a>
         </div>
       </div>
