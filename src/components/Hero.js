@@ -7,14 +7,15 @@ const Hero = () => {
   const { darkMode } = useTheme();
 
   return (
-    <div id="hero"
-      className={`relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden ${
+    <div
+      id="hero"
+      className={`relative flex h-full pt-36 md:pt-0 flex-col items-center justify-center md:min-h-screen text-center ovrflow-hidden ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-800"
       }`}
     >
       <video
         className="absolute top-0 left-0 w-full h-3/4 object-cover"
-        src={darkMode ? "/v6.mp4" : "/v2.mp4"}
+        src={darkMode ? "/v6.mp4" : "/v5.mp4"}
         autoPlay
         loop
         muted
@@ -37,8 +38,9 @@ const Hero = () => {
           I'm Shogofa Azar, a Full-stack web developer with extensive experience
           in building efficient software applications. With over 1500+ hours of
           development, I specialize in React, Redux, JavaScript, Node.js,
-          Next.js, TypeScript, Tailwind CSS, Bootstrap, Html, Sass, MongoDB, APIs,
-          Figma, and Animation Libraries to create high-quality web solutions.
+          Next.js, TypeScript, Tailwind CSS, Bootstrap, Html, Sass, MongoDB,
+          APIs, Figma, and Animation Libraries to create high-quality web
+          solutions.
         </p>
         <p className="mt-2 text-sm md:text-md italic animate__animated animate__fadeIn mb-4 animate__delay-2s">
           Building solutions that make a difference.
@@ -52,9 +54,9 @@ const Hero = () => {
                 : "bg-sky-600 text-white hover:bg-sky-500"
             }`}
           >
-            <span className="animate__animated animate__bounce">
+            <a href="#projects`" className="animate__animated animate__bounce">
               View My Work
-            </span>
+            </a>
           </a>
         </div>
         <div className="mt-8 flex justify-center space-x-4">

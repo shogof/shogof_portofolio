@@ -330,7 +330,7 @@ const Project = () => {
           <FontAwesomeIcon icon={faChevronRight} className="text-lg" />
         </button>
       </div>
-
+      {/*model */}
       {selectedProject && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm z-50">
           <div
@@ -338,6 +338,14 @@ const Project = () => {
               darkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"
             } rounded-2xl p-6 w-11/12 md:w-3/4 lg:w-2/3 flex flex-col relative shadow-2xl`}
           >
+            {/* Close icon with bigger size and hover effect */}
+            <span
+              onClick={handleClosePopup}
+              className="absolute top-6 right-7 text-4xl text-sky-400 hover:text-sky-700 cursor-pointer transition-colors duration-300"
+            >
+              &times;
+            </span>
+
             <h2
               className={`text-3xl font-semibold ${
                 darkMode ? "text-sky-400" : "text-sky-500"
@@ -358,7 +366,7 @@ const Project = () => {
             <img
               src={selectedProject.image}
               alt="Project Full"
-              className="w-full h-56 sm:h-64 md:h-72 lg:h-64 object-cover rounded-xl mb-6"
+              className="hover:scale-105 transform transition-all duration-300 ease-in-out w-full h-56 sm:h-64 md:h-72 lg:h-64 object-cover rounded-xl mb-6"
             />
 
             <div className="flex flex-col md:flex-row mb-6">
@@ -406,41 +414,35 @@ const Project = () => {
 
                 <div className="border-t border-sky-200 mt-4"></div>
 
-                <div className="flex space-x-4 mt-4">
+                <div className="flex gap-x-4 mt-4">
+                  {/* Source Code Button */}
                   <a
                     href={selectedProject.sourceLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${
                       darkMode ? "bg-gray-700" : "bg-gray-800"
-                    } flex items-center text-white py-2 px-4 rounded-full hover:bg-sky-600`}
+                    } flex items-center text-white py-2 px-6 rounded-full shadow-xl hover:bg-sky-600 hover:scale-105 transform transition-all duration-300 ease-in-out w-full md:w-auto`}
                   >
-                    <FontAwesomeIcon icon={faGithub} className="mr-2" />
-                    Source Code
+                    <FontAwesomeIcon icon={faGithub} className="mr-2 text-lg" />
+                    <span className="text-xs font-semibold">Source</span>
                   </a>
+                  {/* Go Live Button */}
                   <a
                     href={selectedProject.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${
                       darkMode ? "bg-sky-500" : "bg-sky-500"
-                    } flex items-center text-white py-2 px-4 rounded-full hover:bg-sky-600`}
+                    } flex items-center text-white py-2 px-6 rounded-full shadow-xl hover:bg-sky-600 hover:scale-105 transform transition-all duration-300 ease-in-out w-full md:w-auto`}
                   >
                     <FontAwesomeIcon
                       icon={faExternalLinkAlt}
-                      className="mr-2"
+                      className="mr-2 text-base"
                     />
-                    Live Demo
+                    <span className="text-xs font-semibold">Go Live</span>
                   </a>
                 </div>
-                <button
-                  onClick={handleClosePopup}
-                  className={`${
-                    darkMode ? "bg-sky-500" : "bg-sky-500"
-                  } text-white py-2 px-4 rounded-full mt-4 shadow-md hover:bg-sky-600 transition-all duration-300 transform hover:scale-105`}
-                >
-                  Close
-                </button>
               </div>
             </div>
           </div>
