@@ -82,14 +82,14 @@ To prepare the application for production, follow these steps:
 
 Experience my portfolio live here: [Live Demo](https://shogof-portofolio-fdzfw9q8x-shogofs-projects.vercel.app/)
 
-## GIF Showcase
+## Demo
 
 Check out the following Image that demonstrates the key features of my portfolio:
 
 ![Portfolio Image](src/images/s.jpg)
 
 
-## Authors
+## Author
 
 - **Your Name**
   - GitHub: [@shogof](https://github.com/shogof)

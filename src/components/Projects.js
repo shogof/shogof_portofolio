@@ -92,7 +92,7 @@ const projectCard = [
     id: "4",
     imageDesktop: work4,
     imageMobile: work44,
-    title: "Weather App",
+    title: "Drum Machine",
     creatorName: "Shogof Azar",
     creatorPos: "Front End Dev",
     creatorYear: "2023",
